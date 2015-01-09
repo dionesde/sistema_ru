@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Sistema Ru</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/cascade.css">
+
+
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link href="css/jquery-ui.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/jquery-ui.js"></script>
+
+        <script>
+            $(function () {
+                $("#datepicker").datepicker();
+            });
+
+        </script>
+
+
+    </head>
+    <body>
+        <div class="row">
+            <div class="container">
+                <div>	
+                    <div style="float:right">Bem-vindo(a),  DIONES DE VARGAS DUTRA </div>
+                    <img src="img/logo_sistema.gif" alt="sistema de controle de restaurantes" title="Sistema de Controle de Restaurantes"/>
+                    <div class="topo"><a>inicial</a> <div class="pull-right lead"><a href="#">Alterar senha</a> - <a href="#">Sair</a></div></div> 
+                    <h2>Sistema de controle do restaurante universitário</h2>
+
+                    <div>
+                        <button id ="botao" class="btn btn-group-bg"  onclick="location.href = 'http://200.132.200.2/ru/agendamento.php'"  type="button">
+
+                            <img width="100px" height="100px" style="border-radius: 10px"  src="img/clock.png"><br>
+                            Agendamento
+                        </button>
+
+                        <button id ="botao" class="btn btn-group-bg"  onclick="location.href = 'http://200.132.200.2/ru/agendamento'"  type="button">
+
+                            <img width="100px" height="100px" style="border-radius: 10px"  src="img/dinheiro.png"><br>
+                            Financeiro
+                        </button>
+
+                        <button id ="botao" class="btn btn-group-bg"  onclick="location.href = 'http://200.132.200.2/ru/agendamento'"  type="button">
+
+                            <img width="100px" height="100px" style="border-radius: 10px"  src="img/relatorio.png"><br>
+                            Relatórios
+                        </button>
+
+                        <button id ="botao" class="btn btn-group-bg"  onclick="location.href = 'http://200.132.200.2/ru/agendamento'"  type="button">
+
+                            <img width="100px" height="100px" style="border-radius: 10px"  src="img/editar.png"><br>
+                            Lançamentos
+                        </button>
+
+                        <button id ="botao" class="btn btn-group-bg"  onclick="location.href = 'http://200.132.200.2/ru/agendamento'"  type="button">
+
+                            <img width="100px" height="100px" style="border-radius: 10px"  src="img/alunos.png"><br>
+                            Cadastros
+                        </button>
+                    </div>
+                    <br>
+                    <div class ="titulos">
+                        Dados do agendamento
+                    </div>
+                    <div>
+                        <div>
+                            
+                            <div id="refeicao" >
+                                
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class ="titulos">
+                        Período do agendamento
+                    </div><br>
+                    <div class="row">
+                        <div class="col-lg-3">
+
+                            
+                        </div>
+                    </div>
+                      <div id="result"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script type="text/javascript">
+            $(function () {
+                $(".datepicker").datepicker({maxDate: "+10d", minDate: "+1d", onClose: function () {
+                        $.ajax({url: "getagendamento.php?inicio="+$('#inicio').val()+"&final="+$('#final').val(), success: function (result) {
+                                $("#result").html(result);
+                            }});
+                    }
+                });
+            });
+        </script>
+    </body>
+
+
+</html>
+

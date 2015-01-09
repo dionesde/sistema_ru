@@ -1,0 +1,206 @@
+<center>
+    <svg id="grafico" style="width:97%; height:300px; border:1px solid #000000; background-color:#FFFFFF" width="840px" height="300px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+        <line x1="0" y1="25%" x2="100%" y2="25%" style="stroke:black;stroke-width:0.1"></line>
+        <text id="label_75" x="20" y="24%" style="fill:#999999; font-size:9pt">
+
+          
+
+        </text>
+        <line x1="0" y1="50%" x2="100%" y2="50%" style="stroke:black;stroke-width:0.1"></line>
+        <text id="label_50" x="20" y="49%" style="fill:#999999; font-size:9pt">
+
+           
+
+        </text>
+        <line x1="0" y1="75%" x2="100%" y2="75%" style="stroke:black;stroke-width:0.1"></line>
+        <text id="label_25" x="20" y="74%" style="fill:#999999; font-size:9pt">
+
+            
+
+        </text>
+        <polyline id="rx" points="" style="fill:blue;fill-opacity:0.4;stroke:blue;stroke-width:1"></polyline>
+        <polyline id="tx" points="" style="fill:red;fill-opacity:0.4;stroke:red;stroke-width:1"></polyline>
+        <line x1="40" y1="0" x2="40" y2="100%" style="stroke:black;stroke-width:0.1"></line>
+        <text x="45" y="15" style="fill:#999999; font-size:9pt">
+
+            
+
+        </text>
+        <line x1="340" y1="0" x2="340" y2="100%" style="stroke:black;stroke-width:0.1"></line>
+        <text x="345" y="15" style="fill:#999999; font-size:9pt">
+
+           
+
+        </text>
+        <line x1="640" y1="0" x2="640" y2="100%" style="stroke:black;stroke-width:0.1"></line>
+        <text x="645" y="15" style="fill:#999999; font-size:9pt">
+        </text>
+
+    </svg>
+</center>
+<div style="text-align:right"><small id="scale">-</small></div>
+<br />
+
+<table class="table" style="width:100%; table-layout:fixed" cellspacing="5">
+    <tr>
+        <td style="text-align:right; vertical-align:top"><strong style="border-bottom:8px solid blue">Download:</strong></td>
+        <td id="rx_bw_cur">0 kbit/s<br />(0 kB/s)</td>
+
+        <td style="text-align:right; vertical-align:top"><strong>Média:</strong></td>
+        <td id="rx_bw_avg">0 kbit/s<br />(0 kB/s)</td>
+
+        <td style="text-align:right; vertical-align:top"><strong>Pico:</strong></td>
+        <td id="rx_bw_peak">0 kbit/s<br />(0 kB/s)</td>
+    </tr>
+    <tr>
+        <td style="text-align:right; vertical-align:top"><strong style="border-bottom:8px solid red">Upload:</strong></td>
+        <td id="tx_bw_cur">0 kbit/s<br />(0 kB/s)</td>
+
+        <td style="text-align:right; vertical-align:top"><strong>Media:</strong></td>
+        <td id="tx_bw_avg">0 kbit/s<br />(0 kB/s)</td>
+
+        <td style="text-align:right; vertical-align:top"><strong>Pico:</strong></td>
+        <td id="tx_bw_peak">0 kbit/s<br />(0 kB/s)</td>
+    </tr>
+</table>
+</div>
+<script>
+    bittx = 0;
+    bitrx = 0;
+    timetmp = 0;
+
+    var G;
+    var TIME = 0;
+    var L01 = 1;
+    var L05 = 2;
+    var L15 = 3;
+
+    var width = $('#grafico').width();
+    var height = 300;
+    var step = 1;
+
+    var data_wanted = Math.floor(width / step);
+    var data_fill = 0;
+    var data_stamp = 0;
+
+    datatx = [];
+    datarx = [];
+
+    for (var i = 0; i < data_wanted; i++)
+    {
+        datatx[i] = 0;
+        datarx[i] = 0;
+    }
+
+
+    function bandwidth_label(bytes, br)
+    {
+        var uby = 'kB/s';
+        var kby = (bytes / 1024);
+
+        if (kby >= 1024)
+        {
+            uby = 'MB/s';
+            kby = kby / 1024;
+        }
+
+        var ubi = 'kbit/s';
+        var kbi = (bytes * 8 / 1024);
+
+        if (kbi >= 1024)
+        {
+            ubi = 'Mbit/s';
+            kbi = kbi / 1024;
+        }
+        if (br) {
+            br = "<br>"
+        } else {
+            br = "";
+        }
+        return kbi.toFixed(2) + " " + ubi + br + "(" + kby.toFixed(2) + " " + uby + ")";
+
+    }
+
+    function plot(datar,datat) {
+        width = $('#grafico').width();
+        var data_max = 0;
+        var data_maxt = 0;
+        var mediar=0;
+        var mediat=0;
+        
+        for (var i = 0; i < datar.length; i++) {
+            data_max = Math.max(data_max, datar[i]);
+            data_maxt = Math.max(data_maxt, datat[i]);
+        }
+        var data_scale = height / (data_max * 1.1);
+
+
+        /* plot data */
+        var pt_01 = '0,' + height;
+        var pt_02 = '0,' + height;
+        
+        var y_01 = 0;
+        var y_02 = 0;
+
+        for (var i = 0; i < datar.length; i++)
+        {
+            var x = i * step;
+
+            y_01 = height - Math.floor(datar[i] * data_scale);
+            y_02 = height - Math.floor(datat[i] * data_scale);
+             
+            mediar+=datar[i];
+            mediat+=datat[i];
+             
+            pt_01 += ' ' + x + ',' + y_01;
+            pt_02 += ' ' + x + ',' + y_02;
+
+        }
+
+        pt_01 += ' ' + width + ',' + y_01 + ' ' + width + ',' + height;
+        pt_02 += ' ' + width + ',' + y_02 + ' ' + width + ',' + height;
+
+        $('#rx').attr('points', pt_01);
+        $('#tx').attr('points', pt_02);
+        $('#rx_bw_cur').html(bandwidth_label(datar[datar.length - 1], true));
+        $('#rx_bw_avg').html(bandwidth_label(mediar/datar.length, true));
+        $('#rx_bw_peak').html(bandwidth_label(data_max, true));
+        
+        $('#tx_bw_cur').html(bandwidth_label(datat[datat.length - 1], true));
+        $('#tx_bw_avg').html(bandwidth_label(mediat/datat.length, true));
+        $('#tx_bw_peak').html(bandwidth_label(data_maxt, true));
+        
+        $('#label_25').html(bandwidth_label((data_max * 0.25 * 1.1), true));
+        $('#label_50').html(bandwidth_label((data_max * 0.50 * 1.1), true));
+        $('#label_75').html(bandwidth_label((data_max * 0.75 * 1.1), true));
+
+    }
+    function speed() {
+
+        $.getJSON("/rede/cross.php", function (result) {
+            if (result.bitrx) {
+                var velocidadetx = (result.bittx - bittx) / (result.time - timetmp);
+                var velocidaderx = (result.bitrx - bitrx) / (result.time - timetmp);
+                bittx = result.bittx;
+                bitrx = result.bitrx;
+                if (isFinite(velocidadetx)) {
+                    datarx.push(velocidaderx);
+                    datatx.push(velocidadetx);
+                    datarx.splice(1, 1);
+                    datatx.splice(1, 1);
+                    timetmp = result.time;
+                    velocidadetx = velocidadetx / 1000;
+                    velocidaderx = velocidaderx / 1000;
+                    plot(datatx,datarx);
+                }
+            }
+        });
+        setTimeout(function () {
+            speed();
+        }, 1000);
+    }
+    setTimeout(function () {
+        speed();
+    }, 1000);
+</script>

@@ -1,0 +1,69 @@
+END
+K 15
+MIT-LICENSE.txt
+V 15
+file _dg.0.t3-3
+K 19
+jquery-1.8.3.min.js
+V 15
+file _dj.0.t3-3
+K 29
+jquery-ui-1.9.2.custom.min.js
+V 15
+file _dl.0.t3-3
+K 29
+jquery-ui-timepicker-addon.js
+V 15
+file _dn.0.t3-3
+K 27
+jquery.ba-hashchange-1.3.js
+V 15
+file _dp.0.t3-3
+K 16
+jquery.cookie.js
+V 15
+file _dr.0.t3-3
+K 24
+jquery.debounce-1.0.5.js
+V 15
+file _dt.0.t3-3
+K 24
+jquery.event.drag-2.2.js
+V 15
+file _dv.0.t3-3
+K 20
+jquery.fullscreen.js
+V 15
+file _dx.0.t3-3
+K 25
+jquery.menuResizer-1.0.js
+V 15
+file _dz.0.t3-3
+K 20
+jquery.mousewheel.js
+V 15
+file _e1.0.t3-3
+K 23
+jquery.sortableTable.js
+V 15
+file _e3.0.t3-3
+K 17
+jquery.sprintf.js
+V 15
+file _e5.0.t3-3
+K 13
+jquery.svg.js
+V 15
+file _e7.0.t3-3
+K 21
+jquery.tablesorter.js
+V 15
+file _e9.0.t3-3
+K 23
+jquery.uitablefilter.js
+V 15
+file _eb.0.t3-3
+K 3
+src
+V 14
+dir _ed.0.t3-3

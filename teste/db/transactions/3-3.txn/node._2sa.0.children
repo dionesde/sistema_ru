@@ -1,0 +1,17 @@
+END
+K 5
+authz
+V 16
+file _2sb.0.t3-3
+K 14
+hooks-env.tmpl
+V 16
+file _2se.0.t3-3
+K 6
+passwd
+V 16
+file _2sg.0.t3-3
+K 13
+svnserve.conf
+V 16
+file _2si.0.t3-3

@@ -1,0 +1,33 @@
+END
+K 24
+config.manyhosts.inc.php
+V 15
+file _9y.0.t3-3
+K 17
+create_tables.sql
+V 15
+file _a1.0.t3-3
+K 25
+create_tables_drizzle.sql
+V 15
+file _a3.0.t3-3
+K 10
+openid.php
+V 15
+file _a5.0.t3-3
+K 17
+signon-script.php
+V 15
+file _a7.0.t3-3
+K 10
+signon.php
+V 15
+file _a9.0.t3-3
+K 18
+swekey.sample.conf
+V 15
+file _ab.0.t3-3
+K 31
+upgrade_tables_mysql_4_1_2+.sql
+V 15
+file _ad.0.t3-3

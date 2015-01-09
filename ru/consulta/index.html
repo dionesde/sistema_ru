@@ -1,0 +1,42 @@
+
+<h1>Consultar situação</h1>
+<br>
+<b>Nome</b>
+<br>
+{nome}
+<br><br>
+<b>Saldo</b>
+<br>
+{credito}
+<br><br>
+<hr>
+<b>Compras</b>
+<br>
+Inicial: <input id="cinicio" type="text" class="datepicker">
+Final:<input id="cfinal" type="text" class="datepicker"  >
+<br><br>  
+{compras}
+<hr>
+<br><br>
+<b>Refeições</b>
+<br>
+Inicial: <input id="finicio" type="text" class="datepicker">
+Final:<input id="ffinal" type="text" class="datepicker"  >
+<br><br>  
+{refeicao}
+<hr>
+<br><br>
+<b>Agendamento</b>
+<br>
+Inicial: <input id="ainicio" type="text" class="datepicker">
+Final:<input id="afinal" type="text" class="datepicker"  >
+<br><br>  
+{agendamento}
+
+
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+
+</script>

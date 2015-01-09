@@ -1,0 +1,65 @@
+header a {
+    color: #BFBFBF;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+}
+.container {
+    width: 100%;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.brand {
+    float: left;
+    display: block;
+    margin-left: -30px;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 20px;
+    text-decoration: underline;
+}
+ .container a:hover, .container a:focus {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+.success {
+background:#e9ffd9 url('http://i.imgur.com/Z2dChip.png') no-repeat 10px 50%;
+border:1px solid #a6ca8a;
+padding-left:30px;
+}
+.warning {
+background:#fff8c4 url('http://i.imgur.com/EfdEAUr.png') no-repeat 10px 50%;
+border:1px solid #f2c779;
+}
+.error {
+background:#ffecec url('http://i.imgur.com/uI9zdLt.png') no-repeat 10px 50%;
+border:1px solid #D8000C;
+color:#D8000C;
+padding-left:30px;
+}
+
+.dropdown-toggle
+{
+font-size: 22;
+}
+
+body
+{
+ margin-top: 0;
+ background-color: #F2F2F2;
+}
+
+.cabecalho
+{
+
+  background-color: #D8D8D8;
+  border-style: solid;
+  
+   
+    
+
+}
+
+#excluir{
+
+    background-color: #FF0000;
+}
