@@ -1,0 +1,85 @@
+END
+K 42
+Application_Octetstream_Download.class.php
+V 16
+file _1jc.0.t3-3
+K 37
+Application_Octetstream_Hex.class.php
+V 16
+file _1jf.0.t3-3
+K 27
+Image_JPEG_Inline.class.php
+V 16
+file _1jh.0.t3-3
+K 25
+Image_JPEG_Link.class.php
+V 16
+file _1jj.0.t3-3
+K 26
+Image_PNG_Inline.class.php
+V 16
+file _1jl.0.t3-3
+K 6
+README
+V 16
+file _1jn.0.t3-3
+K 8
+TEMPLATE
+V 16
+file _1jp.0.t3-3
+K 17
+TEMPLATE_ABSTRACT
+V 16
+file _1jr.0.t3-3
+K 30
+Text_Plain_Bool2text.class.php
+V 16
+file _1jt.0.t3-3
+K 31
+Text_Plain_Dateformat.class.php
+V 16
+file _1jv.0.t3-3
+K 29
+Text_Plain_External.class.php
+V 16
+file _1jx.0.t3-3
+K 30
+Text_Plain_Formatted.class.php
+V 16
+file _1jz.0.t3-3
+K 30
+Text_Plain_Imagelink.class.php
+V 16
+file _1k1.0.t3-3
+K 25
+Text_Plain_Link.class.php
+V 16
+file _1k3.0.t3-3
+K 31
+Text_Plain_Longtoipv4.class.php
+V 16
+file _1k5.0.t3-3
+K 30
+Text_Plain_Preappend.class.php
+V 16
+file _1k7.0.t3-3
+K 24
+Text_Plain_Sql.class.php
+V 16
+file _1k9.0.t3-3
+K 30
+Text_Plain_Substring.class.php
+V 16
+file _1kb.0.t3-3
+K 8
+abstract
+V 15
+dir _1kd.0.t3-3
+K 23
+generator_main_class.sh
+V 16
+file _1l7.0.t3-3
+K 19
+generator_plugin.sh
+V 16
+file _1l9.0.t3-3

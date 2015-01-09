@@ -1,0 +1,344 @@
+header a {
+    color: #BFBFBF;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+}
+.container {
+    width: 100%;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background:#fff;
+}
+.brand {
+    float: left;
+    display: block;
+    margin-left: -30px;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 20px;
+    text-decoration: underline;
+}
+.container a:hover, .container a:focus {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+.success {
+    background:#e9ffd9 url('http://i.imgur.com/Z2dChip.png') no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+    padding-left:30px;
+}
+.warning {
+    background:#fff8c4 url('http://i.imgur.com/EfdEAUr.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+.error {
+    background:#ffecec url('http://i.imgur.com/uI9zdLt.png') no-repeat 10px 50%;
+    border:1px solid #D8000C;
+    color:#D8000C;
+    padding-left:30px;
+}
+
+.dropdown-toggle
+{
+    font-size: 22;
+}
+
+body
+{
+    margin-top: 0;
+    background-color: #069;;
+    /* background-image: url("mac2.jpg"); */
+
+}
+
+.cabecalho
+{
+
+    background-color: #D8D8D8;
+    border-style: solid;
+
+
+
+
+}
+
+#excluir{
+
+    background-color: #FF0000;
+}
+
+
+/* CSS PARA EDIÇÃO DE BOTÔES ---LAISER */
+
+#refeicao{
+
+  margin-left: 300px;
+
+
+  
+
+
+
+}
+
+#checkbox{
+
+
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+  margin-left: 135px;
+  margin-right: 5px;
+  height: 50px;
+  
+
+
+}
+#almoco{
+
+
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 80px;
+  
+  
+
+
+}
+
+#janta{
+
+
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
+  
+  
+  
+
+
+}
+
+#botao{
+    width: 150px;
+    height: 150px;
+    background-color: Transparent;  
+    box-shadow: 1px 1px 5px 7px #A4A4A4;
+    -moz-box-shadow: 1px 1px 5px 7px #A4A4A4;
+    -webkit-box-shadow: 1px 1px 5px 7px #A4A4A4;
+    -o-box-shadow: 1px 1px 5px 7px #A4A4A4;
+    border-radius: 10px;
+
+    margin: 8px;
+    margin-top: 10px;
+
+}
+
+#botao img{
+
+    width:100px;
+    height:100px;
+
+    top:50%;
+    left:50%;
+
+
+
+}
+
+#botao:hover{
+    background-color: #BDBDBD;
+    font-color : white;
+
+    -webkit-transition: .4s ease-out color, .4s ease-out background-color;
+    -transition: .4s ease-out color, .4s ease-out background-color; 
+
+
+}
+
+
+#botao-menu-new{
+
+    background-color: #31B404;  
+    width: 300px;
+    box-shadow: 3px 3px 10px 5px #585858;
+    -moz-box-shadow: 3px 3px 10px 5px #585858;
+    -webkit-box-shadow: 3px 3px 10px 5px #585858;
+    -o-box-shadow: 3px 3px 10px 5px #585858;
+    border-radius: 10px;
+
+}
+
+#botao-menu-new:hover{
+
+    background-color: #298A08;
+    font-color : white;
+
+    -webkit-transition: .4s ease-out color, .4s ease-out background-color;
+    -transition: .4s ease-out color, .4s ease-out background-color; 
+
+}
+
+
+
+
+#botao-menu-edit{
+
+    background-color: #F4FA58;  
+    width: 300px;
+    box-shadow: 3px 3px 10px 5px #585858;
+    -moz-box-shadow: 3px 3px 10px 5px #585858;
+    -webkit-box-shadow: 3px 3px 10px 5px #585858;
+    -o-box-shadow: 3px 3px 10px 5px #585858;
+    border-radius: 10px;
+
+}
+
+#botao-menu-edit:hover{
+
+    background-color: #868A08;
+    font-color : white;
+
+    -webkit-transition: .4s ease-out color, .4s ease-out background-color;
+    -transition: .4s ease-out color, .4s ease-out background-color; 
+
+}
+
+#botao-menu-delete{
+
+    background-color: #FE2E2E;  
+    width: 300px;
+    box-shadow: 3px 3px 10px 5px #585858;
+    -moz-box-shadow: 3px 3px 10px 5px #585858;
+    -webkit-box-shadow: 3px 3px 10px 5px #585858;
+    -o-box-shadow: 3px 3px 10px 5px #585858;
+    border-radius: 10px;
+}
+
+#botao-menu-delete:hover{
+
+    background-color: #B40404;
+    font-color : white;
+
+    -webkit-transition: .4s ease-out color, .4s ease-out background-color;
+    -transition: .4s ease-out color, .4s ease-out background-color; 
+
+}
+
+#campo-aplicar{
+    height: 100px;
+    width: 400px;
+    background-color: Transparent;  
+    box-shadow: 3px 3px 10px 5px #585858;
+    -moz-box-shadow: 3px 3px 10px 5px #585858;
+    -webkit-box-shadow: 3px 3px 10px 5px #585858;
+    -o-box-shadow: 3px 3px 10px 5px #585858;
+    border-radius: 10px;
+
+}
+
+#campo-menu{
+
+    background-color: red;
+    height: 300px;
+    width: 340px;
+    background-color: Transparent;  
+    box-shadow: 3px 3px 10px 5px #A4A4A4;
+    -moz-box-shadow: 3px 3px 10px 5px #A4A4A4;
+    -webkit-box-shadow: 3px 3px 10px 5px #A4A4A4;
+    -o-box-shadow: 3px 3px 10px 5px #A4A4A4;
+    border-radius: 10px;
+}
+
+#salvar:hover{
+    background-color: #848484;
+    font-color : white;
+
+    -webkit-transition: .4s ease-out color, .4s ease-out background-color;
+    -transition: .4s ease-out color, .4s ease-out background-color;   
+
+}
+
+#conteudo{
+
+    margin-top: 200px;
+    margin-left: 500px;
+    width: 500px;
+
+}
+
+#salvar{
+
+    background-color: #BDBDBD;
+    font-color : white;
+    box-shadow: 3px 3px 10px 5px #585858;
+    -moz-box-shadow: 3px 3px 10px 5px #585858;
+    -webkit-box-shadow: 3px 3px 10px 5px #585858;
+    -o-box-shadow: 3px 3px 10px 5px #585858;
+    border-radius: 10px;
+    -webkit-transition: .4s ease-out color, .4s ease-out background-color;
+    -transition: .4s ease-out color, .4s ease-out background-color; 
+
+
+}
+.topo {
+    color: #FFF;
+    background: none repeat scroll 0% 0% #36507F;
+    padding: 0.5em 1em;
+}
+.topo a{
+    color:#fff;
+}
+h2{
+    font-weight: bold;
+    font-size: 11pt;
+    color: #304670;
+    margin: 1em;
+}
+.titulos{
+    font-weight: bold;
+    color: #304670;
+    background: none repeat scroll 0% 0% #D9EDFF;
+    vertical-align: top;
+    padding: 3px;
+    border: 1px solid #BCC8D2;
+    
+}
+th{
+    font-weight: bold;
+    color: #304670;
+    background: none repeat scroll 0% 0% #D9EDFF;
+    vertical-align: top;
+    padding: 1px;
+    border: 1px solid #BCC8D2;
+}
+.table > thead > tr > th{
+    padding: 1px;
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    body{
+       font-size: 20pt; 
+    }
+    
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+ body{
+       font-size: 20pt; 
+    }
+}

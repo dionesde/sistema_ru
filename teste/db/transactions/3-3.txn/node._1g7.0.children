@@ -1,0 +1,49 @@
+END
+K 30
+AuthenticationPlugin.class.php
+V 16
+file _1g8.0.t3-3
+K 22
+ExportPlugin.class.php
+V 16
+file _1gb.0.t3-3
+K 22
+ImportPlugin.class.php
+V 16
+file _1gd.0.t3-3
+K 23
+PluginManager.class.php
+V 16
+file _1gf.0.t3-3
+K 24
+PluginObserver.class.php
+V 16
+file _1gh.0.t3-3
+K 32
+TransformationsInterface.int.php
+V 16
+file _1gj.0.t3-3
+K 31
+TransformationsPlugin.class.php
+V 16
+file _1gl.0.t3-3
+K 23
+UploadInterface.int.php
+V 16
+file _1gn.0.t3-3
+K 4
+auth
+V 15
+dir _1gp.0.t3-3
+K 6
+export
+V 15
+dir _1hb.0.t3-3
+K 6
+import
+V 15
+dir _1id.0.t3-3
+K 15
+transformations
+V 15
+dir _1jb.0.t3-3
