@@ -1,10 +1,9 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 session_start();
-if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+if(!isset ($_SESSION['matricula']) == true)
 {
-        unset($_SESSION['login']);
-        unset($_SESSION['senha']);
+        unset($_SESSION['matricula']);
         header('location:login.php');
 }
 
@@ -14,7 +13,7 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == tru
     use raelgc\view\Template;
 
     $tpl = new Template("index.html");
-    
+   
     $pasta=$_GET['option'];
 
     if($_GET['option']){
@@ -30,10 +29,11 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == tru
 	}
 
     }else{
-        $tpl->addFile("conteudo","home.html");	
+        header('location:index.php?option=consulta');
     }
 
-    $tpl->addFile("menu","menu.html");	
+    $tpl->addFile("menu","menu.html");
+    $tpl->nome_usuario=$_SESSION['nome'];
     $tpl->show();
 
 ?>

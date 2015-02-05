@@ -1,0 +1,19 @@
+
+<h2>Excluir agendamento</h2>
+
+{agendamento}
+
+<script>
+    idt=null;
+    function excluir(id) {
+        idt=id;
+        $.ajax({url: "excluir/excluir.php?id="+id, success: function (result) {
+                if(result == 'ok'){
+                   $('#table_'+idt).fadeOut( "slow" );
+                }else{
+                     alert(result);
+                }
+            }});
+    }
+
+</script>

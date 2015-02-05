@@ -1,0 +1,67 @@
+
+<h2>Consultar situação</h2>
+<b>Nome</b>
+<br>
+{nome}
+<br><br>
+<b>Saldo</b>
+<br>
+{credito}
+<hr>
+<b>Compras</b>
+<br>
+Inicial: <input id="cinicio" type="text" class="agendamento datepicker">
+Final:<input id="cfinal" type="text" class="agendamento datepicker"  >
+<br><br>  
+<div id="cresult">
+{compras}
+</div>
+<hr>
+<br><br>
+<b>Refeições</b>
+<br>
+Inicial: <input id="finicio" type="text" class="agendamento datepicker">
+Final:<input id="ffinal" type="text" class="agendamento datepicker"  >
+<br><br>  
+<div id="fresult">
+{refeicao}
+</div>
+<hr>
+<br><br>
+<b>Agendamento</b>
+<br>
+Inicial: <input id="ainicio" type="text" class=" agendamento datepicker">
+Final:<input id="afinal" type="text" class="agendamento datepicker"  >
+<br><br>  
+<div id="aresult">
+{agendamento}
+</div>
+
+<script>
+    function agendamento() {
+        if (($('#ainicio').val() != '') && ($('#afinal').val() != '')) {
+         
+            $.ajax({url: "consulta/getAgendamento.php?inicio=" + $('#ainicio').val() + "&final=" + $('#afinal').val() + "&consulta=agendamento", success: function (result) {
+                    $("#aresult").html(result);
+                }});
+        }
+        if (($('#finicio').val() != '') && ($('#ffinal').val() != '')) {
+         
+            $.ajax({url: "consulta/getAgendamento.php?inicio=" + $('#finicio').val() + "&final=" + $('#ffinal').val() + "&consulta=refeicao", success: function (result) {
+                    $("#fresult").html(result);
+                }});
+        }
+        if (($('#cinicio').val() != '') && ($('#cfinal').val() != '')) {
+         
+            $.ajax({url: "consulta/getAgendamento.php?inicio=" + $('#cinicio').val() + "&final=" + $('#cfinal').val() + "&consulta=compras", success: function (result) {
+                    $("#cresult").html(result);
+                }});
+        }
+    }
+    $(function () {
+        $(".agendamento").datepicker({onClose: function () {
+                agendamento();
+            }});
+    });
+
+</script>

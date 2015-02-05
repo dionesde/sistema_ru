@@ -1,34 +1,5 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-<div class="container">
-<a class="brand" href="/">UFSM</a>
-<ul class="nav navbar-nav">
-	<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/index.php?option=alunos">Alunos</a></li>
-            <li><a href="/index.php?option=cursos">Cursos</a></li>
-            <li class="divider"></li>
-            <li><a href="#">4º item do menu</a></li>
-            <li class="divider"></li>
-            <li><a href="#">5º item do menu</a></li>
-          </ul>
-        </li>
-</ul>
-<ul class="nav navbar-nav">
-	<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rede <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="index.php?option=cadastro">Cadastro de mac</a></li>
-            <li><a href="index.php?option=rede&action=speed">Real time</a></li>
-            <li class="divider"></li>
-            <li><a href="index.php?option=cadastro&action=aplicar">Aplicar dhcp</a></li>
-          </ul>
-        </li>
-</ul>
-<button type="button" class="btn btn-danger pull-right btn-group-sm" style="margin:6px" onClick="location.href = 'sair.php'">
-  <img width="30px" height="30px" title = "Editar" src="img/power.png"> Sair
-</button>
-
-
+<div style="float:right">Bem-vindo(a), {nome_usuario}</div> <br>
+<img src="img/logo_sistema.gif" alt="sistema de controle de restaurantes" title="Sistema de Controle de Restaurantes"/>
+<div class="topo">
+    <a href="?option=consulta">Consultar situação</a> | <a href="?option=agendamento">Realizar Agendamento</a> | <a href="?option=excluir">Excluir agendamento</a> | <a href="?option=config">Configurações</a> | <a href="sair.php">Sair</a>
 </div>
-</nav>

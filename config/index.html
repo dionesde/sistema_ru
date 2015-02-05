@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<h2>Informações pessoais</h2>
+
+<div class="td">Nome</div><div class="td"><div id="nomeSet">{nome} </div><a href="#" onclick="nome()">editar</a></div>
+<hr>
+<div class="td">E-mail</div><div class="td"><div id="emailSet">{email}</div> <a href="#" onclick="email()">editar</a></div>
+<hr>
+<h2>Login</h2>
+<div class="td">Senha</div><div class="td"><a href="#" onclick="senha()">editar</a></div>
+
+
+<div id="dialog-nome" title="Alterar E-mail">
+    <div id="result-nome"></div>
+    <table>
+        <tr><td>Nome:</td><td><input id="nome" type="text"></td></tr>
+    </table>
+    <br>
+    <button id="gravar" onclick="troca_nome()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Salvar</button>
+</div>
+
+<div id="dialog-email" title="Alterar E-mail">
+    <div id="result-email"></div>
+    <table>
+        <tr><td>E-mail:</td><td><input id="email" type="text"></td></tr>
+    </table>
+    <br>
+    <button id="gravar" onclick="troca_email()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Salvar</button>
+</div>
+
+<div id="dialog-senha" title="Alterar senha">
+    <div id="result-senha"></div>
+    <table>
+        <tr><td>Nova senha:</td><td><input id="senha" type="password"></td></tr>
+        <tr><td>Digite novamente:</td><td><input id="novamente" type="password"></td></tr>
+    </table>
+    <br>
+    <button id="gravar" onclick="troca_senha()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Salvar</button>
+</div>
+<script>
+    idt = null;
+    $(function () {
+        $("#dialog-senha").dialog({
+            autoOpen: false,
+            width: 350,
+            modal: true});
+        $("#dialog-email").dialog({
+            autoOpen: false,
+            width: 350,
+            modal: true});
+         $("#dialog-nome").dialog({
+            autoOpen: false,
+            width: 350,
+            modal: true});
+        
+    });
+    function nome(){
+        $('#result-nome').html("<br>");
+        $('#nome').val('');
+        $("#dialog-nome").dialog("open");
+    }
+    function senha(){
+        $('#result-senha').html("<br>");
+        $('#senha').val('');
+        $('#novamente').val('');
+        $("#dialog-senha").dialog("open");
+    }
+    function email(){
+        $('#result-email').html("<br>");
+        $('#email').val('');
+        $("#dialog-email").dialog("open");
+    }
+     function troca_nome() {
+        $.ajax({url: "config/troca.php?nome=" + $('#nome').val(), success: function (result) {
+                if (result == 'ok') {
+                    $('#result-nome').hide();
+                    $('#result-nome').html('<span class="success">Nome alterado com sucesso.</span>');
+                    $('#result-nome').fadeIn("slow");
+                    $('#nomeSet').html($('#nome').val());
+                    $('#nome').val('');
+                 
+                } else {
+                    $('#result-senha').hide();
+                    $('#result-senha').html('<span class="error">' + result + '</span>');
+                    $('#result-senha').fadeIn("slow");
+                }
+            }});
+    }
+    function troca_senha() {
+        $.ajax({url: "config/troca.php?senha=" + $('#senha').val() + "&novamente=" + $('#novamente').val(), success: function (result) {
+                if (result == 'ok') {
+                    $('#result-senha').hide();
+                    $('#result-senha').html('<span class="success">Senha alterada com sucesso.</span>');
+                    $('#result-senha').fadeIn("slow");
+                    $('#senha').val('');
+                    $('#novamente').val('');
+                } else {
+                    $('#result-senha').hide();
+                    $('#result-senha').html('<span class="error">' + result + '</span>');
+                    $('#result-senha').fadeIn("slow");
+                }
+            }});
+    }
+         function troca_email() {
+        $.ajax({url: "config/troca.php?email=" + $('#email').val(), success: function (result) {
+                if (result == 'ok') {
+                    $('#result-email').hide();
+                    $('#result-email').html('<span class="success">E-mail alterada com sucesso.</span>');
+                    $('#result-email').fadeIn("slow");
+                    $('#emailSet').html($('#email').val());
+                    $('#email').val('');
+                    
+                } else {
+                    $('#result-email').hide();
+                    $('#result-email').html('<span class="error">' + result + '</span>');
+                    $('#result-email').fadeIn("slow");
+                }
+            }});
+    }
+
+</script>

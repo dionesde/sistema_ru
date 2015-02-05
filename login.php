@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Sistema de cadatro de Computatores</title>
+    <title>Sistema de R.U UFSM-CS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,6 +12,7 @@
      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
      
      <script src="js/bootstrap.min.js"></script>
+
     <style type="text/css">
 
 .panel-heading {
@@ -21,6 +22,11 @@
 .panel-footer {
 	padding: 1px 15px;
 	color: #A0A0A0;
+}
+
+body{
+
+	background-color: #006699;
 }
 
 .profile-img {
@@ -58,7 +64,7 @@ border:1px solid #8ed9f6;
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-					<strong>Log in </strong>
+					<strong>RU UFSM-CS </strong>
 					</div>
 					<div class="panel-body">
 						<form role="form" action="ope.php" method="POST">
@@ -78,7 +84,7 @@ border:1px solid #8ed9f6;
 												<span class="input-group-addon">
 													<i class="glyphicon glyphicon-user"></i>
 												</span> 
-												<input class="form-control" placeholder="Usuário" name="login" type="text" autofocus>
+												<input class="form-control" placeholder="Matrícula" name="login" type="text" autofocus>
 											</div>
 										</div>
 										<div class="form-group">
@@ -92,6 +98,7 @@ border:1px solid #8ed9f6;
 										<div class="form-group">
 											<input type="submit" class="btn btn-lg btn-primary btn-block" value="Logar">
 										</div>
+                                                                            <a href='recuperar'>Esqueceu a senha?</a>
 									</div>
 								</div>
 							</fieldset>
